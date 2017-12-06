@@ -12,26 +12,30 @@ Author URL: http://www.les-planetes2kentin.fr/
                 var indexContainer = index;
                 var sheetsValues=[];
                 var tempHeight =0;
-                $(this).find('.papersheet').each(function(index){//for each sheet inside                   
+                var tempWidth=0;
+                $(this).find('.papersheet').each(function(index){//for each sheet inside 
                     sheetsValues.push( {'top':$(this).offset().top, 'left':$(this).offset().left-margin,'width': $(this).width() ,'height':$(this).height()+margin*2});         
                     tempHeight += $(this).outerHeight()+margin*2;
+                    tempWidth= $(this).width() > tempWidth ? $(this).width():tempWidth; //get the heighest container           
                 });   
                 maxHeight= tempHeight > maxHeight ? tempHeight+margin:maxHeight; //get the heighest container
-                sheetsInitialValuesForEachContainers.push(sheetsValues);
+                sheetsInitialValues.push(sheetsValues);
+                //console.log(tempWidth);
+                //$(this).prepend('<div></div>');//force the container to be large enough
+                //$(this).find(":first-child").width(tempWidth+margin);
             });
             $sheetsContainers.height( maxHeight );//force the container to be large enough
-            $sheetsContainers.width( maxWidth );
         }
         function update(element,scrollPos){
             element.each(function(index){ //for each selector, 
                 var indexContainer = index;
                 $(this).find('.papersheet').each(function(index){//for each sheet inside                    
-                    if(scrollPos + windowHeight - sheetsInitialValuesForEachContainers[indexContainer][index]['height'] < sheetsInitialValuesForEachContainers[indexContainer][index]['top'])//stay fixed
+                    if(scrollPos + windowHeight - sheetsInitialValues[indexContainer][index]['height'] < sheetsInitialValues[indexContainer][index]['top'])//stay fixed
                     {   
                         $(this).css({
                         'position': "fixed",
-                        'left':sheetsInitialValuesForEachContainers[indexContainer][index]['left'],
-                        'width':sheetsInitialValuesForEachContainers[indexContainer][index]['width'],
+                        'left':sheetsInitialValues[indexContainer][index]['left'],
+                        'width':sheetsInitialValues[indexContainer][index]['width'],
                         'bottom': "0px",   
                         'z-index':zindexOffset+element.length-index });
                     }
@@ -40,7 +44,7 @@ Author URL: http://www.les-planetes2kentin.fr/
                         $(this).css({
                             'position': "relative",
                             'left':'0px',
-                            'width':sheetsInitialValuesForEachContainers[indexContainer][index]['width'],
+                            'width':sheetsInitialValues[indexContainer][index]['width'],
                             'bottom': "0px",   
                             'z-index':zindexOffset+element.length-index
                              });
@@ -52,9 +56,8 @@ Author URL: http://www.les-planetes2kentin.fr/
 		if (arguments.length < 1 || zindexOffset === null) zindexOffset = 0;
         //initialization
         var $sheetsContainers = $(this);
-        var sheetsInitialValuesForEachContainers=[];
-        var margin = parseInt($('.papersheet').css( "margin" ),10);
-        var maxWidth = parseInt($('.papersheet').outerWidth(true),10);
+        var sheetsInitialValues=[];
+        var margin = parseInt($('.papersheet').css( "margin" ),10);  
         var maxHeight = 0;
         var windowHeight = $(window).height();
         init($sheetsContainers);
