@@ -1,82 +1,127 @@
-{% load staticfiles %}
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/perso.css' %}"  media="screen,projection"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Parallax Plugin Demo</title>
+<link href="css/testPanelParallax.css" rel="stylesheet" type="text/css" />
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/slipSheet-0.2.0.js"></script>
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
+<script type="text/javascript">
+$(document).ready(function(){
 
-  <body>
-    <div id="main">
-        <header>
-            <nav>
-                KT logo
-                <ul>
-                    <li>Contact</li>
-                    <li>Shop</li>
-                    <li>Produits</li>
-                    <li>Solutions</li>
-                    <li>Support</li>
-                </ul>
-                <div>
-                    connexion area
-                </div>
-            </nav>
-        </header>  
-        <section>
-            <div>
-                <h1>jumbotron</h1>
-                <p>Sunt consectetur eu est sint ex non dolor irure. Dolore non ad consectetur elit ex. Adipisicing aute ut do excepteur cillum consequat non. Amet incididunt aute excepteur nisi adipisicing commodo fugiat ea ex aliqua irure ullamco qui. Consequat commodo laborum consectetur consequat. Ipsum quis dolor ullamco incididunt occaecat fugiat sit. Ipsum excepteur sunt nulla qui minim aliquip exercitation amet mollit mollit enim ea.</p>
-            </div>
-            <div>carrousel</div>
-        </section>
-        <section>
-            <article>post blog</article>
-            <article>post blog</article>
-            <article>post blog</article>
-        </section>
-        <section>
-            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
-            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
-            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
-            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
-            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
-            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
-        </section>
-        
-        <footer>
-            <nav>
-                <div>
-                    <h2>KELENN Technology</h2>
-                    <p>Headquarters: 09 52 88 04 12</p>
-                </div>
-                <div>
-                    <h2>Links</h2>
-                    <ul>
-                        <li>About</li>
-                        <li>Careers</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-            </nav>
-        </footer>
-    </div>          
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
-    <script>
-     $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-    </script>
-  </body>
+	$('.paperContainer').slideSheet();
+})
+</script>
+</head>
+
+<body>
+    <section style="background:url(img/starry2.jpg) no-repeat fixed center; height:600px; position:relative; z-index:200;"></section>
+    <div class="cardsContainer">
+        <div class="cardsColumns paperContainer">
+            <article class="card hoverable papersheet" >
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/290px-Eso1737e.jpg" alt="1I/ʻOumuamua" >
+                    <figcaption>Fig1. - 1I/ʻOumuamua.</figcaption>
+                </figure>
+                <p>Pariatur mollit tempor amet sunt qui. Pariatur ipsum elit aliquip id aute non. Commodo cillum reprehenderit sit culpa sint. In tempor dolore qui minim non est Lorem aute. Exercitation reprehenderit exercitation dolor sint. Ipsum est laboris consectetur pariatur cupidatat reprehenderit enim voluptate consectetur veniam pariatur occaecat irure. Laborum et exercitation cillum officia quis eu eiusmod nostrud incididunt aliquip in.</p>
+                <p>Enim sint voluptate ea qui consectetur culpa veniam mollit veniam non commodo culpa deserunt nisi. Mollit aute qui nisi eu nulla non id esse ipsum fugiat ut irure pariatur. Incididunt fugiat do nisi sit deserunt esse commodo deserunt consectetur ut.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/PIA19562-Ceres-DwarfPlanet-Dawn-RC3-image19-20150506.jpg" alt=" (1) Cérès">
+                    <figcaption>Fig2. -  (1) Cérès.</figcaption>
+                </figure>
+                <p>Aliqua fugiat elit cillum consectetur officia veniam exercitation consequat tempor ad ut. Et tempor nulla ipsum occaecat. Reprehenderit occaecat eiusmod qui elit proident consequat eiusmod. Id Lorem elit ea eu nisi deserunt.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/300px-Phobos_colour_2008.jpg" alt=" Mars I Phobos." >
+                    <figcaption>Fig3. -  Mars I Phobos.</figcaption>
+                </figure>
+                <p>Incididunt aliquip ex dolore incididunt nisi anim aliquip eiusmod. Consequat aute dolor pariatur reprehenderit et officia consectetur. Sint et reprehenderit esse exercitation dolore. Ipsum reprehenderit aliquip labore aliqua non proident sunt ex duis. Incididunt culpa dolor aute do consequat non culpa aute aliqua consectetur dolor sunt magna. Sunt nostrud Lorem eu occaecat. Irure Lorem labore adipisicing sunt esse duis amet ex quis ad.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/europe.jpg" alt=" J II Europe." >
+                    <figcaption>Fig4. -  J II Europe </figcaption>
+                </figure>
+                <p>Irure deserunt ad sint dolore. Ea velit consectetur irure quis commodo dolor veniam consequat sunt cupidatat officia. Esse et elit culpa nostrud velit sint nostrud adipisicing. Ex nisi adipisicing magna fugiat deserunt minim exercitation est. Veniam ipsum aliquip cupidatat laboris occaecat sit. Deserunt qui velit magna qui incididunt adipisicing quis.</p>
+                <p>Consequat ipsum labore do amet. Laborum minim nulla minim do in nulla deserunt. Fugiat aliquip sunt laborum nisi eu excepteur ex aliquip irure anim cupidatat. Esse cillum anim in nisi dolore nostrud velit mollit enim culpa. Amet officia incididunt enim culpa nisi nisi. Ad sunt aute irure Lorem ea excepteur.</p>
+            </article>
+        </div>
+          
+        <div class="cardsColumns paperContainer">
+            <article class="card hoverable papersheet" >
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/290px-Eso1737e.jpg" alt="1I/ʻOumuamua" >
+                    <figcaption>Fig1. - 1I/ʻOumuamua.</figcaption>
+                </figure>
+                <p>Pariatur mollit tempor amet sunt qui. Pariatur ipsum elit aliquip id aute non. Commodo cillum reprehenderit sit culpa sint. In tempor dolore qui minim non est Lorem aute. Exercitation reprehenderit exercitation dolor sint. Ipsum est laboris consectetur pariatur cupidatat reprehenderit enim voluptate consectetur veniam pariatur occaecat irure. Laborum et exercitation cillum officia quis eu eiusmod nostrud incididunt aliquip in.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/mars.jpg" alt="Mars">
+                    <figcaption>Fig2. -  Mars</figcaption>
+                </figure>
+                <p>Aliqua fugiat elit cillum consectetur officia veniam exercitation consequat tempor ad ut. Et tempor nulla ipsum occaecat. Reprehenderit occaecat eiusmod qui elit proident consequat eiusmod. Id Lorem elit ea eu nisi deserunt.</p>
+                <p>Velit adipisicing irure deserunt mollit. Esse fugiat anim pariatur est ex commodo duis qui nulla irure eiusmod ut consequat. Cupidatat irure ex sint nulla sit cillum duis. Amet pariatur commodo amet laborum eu reprehenderit Lorem ea nulla reprehenderit esse do Lorem.</p>
+                <p>Irure veniam aliquip adipisicing veniam. Elit laboris reprehenderit velit consequat minim est mollit Lorem sint. Officia aute quis sunt enim eu ullamco. Voluptate id ea dolor mollit reprehenderit non amet officia est aute. Culpa amet magna aliqua pariatur aliqua ex ad consequat velit eiusmod proident eiusmod magna enim. Nostrud est ipsum elit anim. Nostrud minim tempor amet veniam labore.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/Церера-19.02.2015.jpg" alt=" (1) Cérès." >
+                    <figcaption>Fig3. -  (1) Cérès..</figcaption>
+                </figure>
+                <p>Incididunt aliquip ex dolore incididunt nisi anim aliquip eiusmod. Consequat aute dolor pariatur reprehenderit et officia consectetur. Sint et reprehenderit esse exercitation dolore. Ipsum reprehenderit aliquip labore aliqua non proident sunt ex duis. Incididunt culpa dolor aute do consequat non culpa aute aliqua consectetur dolor sunt magna. Sunt nostrud Lorem eu occaecat. Irure Lorem labore adipisicing sunt esse duis amet ex quis ad.</p>
+            </article>
+        </div>  
+        <div class="cardsColumns paperContainer">
+            <article class="card hoverable papersheet" >
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/220px-Olympus_Mons.jpeg" alt="Olympus Mons" >
+                    <figcaption>Fig1. - Olympus Mons.</figcaption>
+                </figure>
+                <p>Ex pariatur irure irure anim aliqua et sint id incididunt eiusmod. Ex ipsum ut eu duis consequat. Deserunt tempor cillum minim ut ipsum. Aliquip aute sunt enim tempor voluptate do ipsum nisi. Magna dolore eiusmod reprehenderit labore velit consequat et duis quis. Reprehenderit laborum aliquip excepteur veniam ut nisi nostrud culpa eiusmod culpa sit pariatur.</p>
+                <p>Veniam pariatur eiusmod in nostrud. Do aliquip et aliqua dolor et nisi pariatur. Ad aute consequat nisi fugiat fugiat ex amet anim minim.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/PIA19562-Ceres-DwarfPlanet-Dawn-RC3-image19-20150506.jpg" alt=" (1) Cérès">
+                    <figcaption>Fig2. -  (1) Cérès.</figcaption>
+                </figure>
+                <p>Aliqua fugiat elit cillum consectetur officia veniam exercitation consequat tempor ad ut. Et tempor nulla ipsum occaecat. Reprehenderit occaecat eiusmod qui elit proident consequat eiusmod. Id Lorem elit ea eu nisi deserunt.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/Церера-19.02.2015.jpg" alt=" (1) Cérès." >
+                    <figcaption>Fig3. -  (1) Cérès.</figcaption>
+                </figure>
+                <p>Incididunt aliquip ex dolore incididunt nisi anim aliquip eiusmod. Consequat aute dolor pariatur reprehenderit et officia consectetur. Sint et reprehenderit esse exercitation dolore. Ipsum reprehenderit aliquip labore aliqua non proident sunt ex duis. Incididunt culpa dolor aute do consequat non culpa aute aliqua consectetur dolor sunt magna. Sunt nostrud Lorem eu occaecat. Irure Lorem labore adipisicing sunt esse duis amet ex quis ad.</p>
+            </article>
+            <article class="card hoverable papersheet">
+                <h3>Card Title</h3>
+                <figure>
+                    <img src="img/Mars_atmosphere.jpg" alt="Mars atmosphere." >
+                    <figcaption>Fig4. -  Mars atmosphere </figcaption>
+                </figure>
+                <p>Anim in adipisicing sit ad adipisicing ea aliqua. Dolore tempor consequat officia proident non Lorem ullamco consectetur enim cillum dolor labore consectetur aliqua. Quis Lorem fugiat nostrud sunt sint eu dolor. Sint est qui voluptate deserunt Lorem cillum nisi dolore ullamco fugiat incididunt. Commodo proident cillum veniam excepteur aute fugiat labore sit veniam enim laboris. Cupidatat esse in incididunt ullamco minim dolore sit id reprehenderit. Proident aute amet fugiat ad non tempor id id elit.</p>
+                <p>Incididunt veniam sunt dolore cillum ex ullamco labore ipsum nostrud Lorem. Nisi magna culpa consequat ex occaecat voluptate. Non proident sint duis ex reprehenderit labore ex dolore cupidatat quis commodo do nostrud pariatur. Minim cillum reprehenderit pariatur cillum excepteur adipisicing proident mollit laboris et laborum irure.</p>
+            </article>
+        </div>  
+    </div>
+    <section style="background:url(img/starry2.jpg) no-repeat fixed center; height:500px; position:relative; z-index:200;"></section>
+    
+</body>
 </html>
-      
-
