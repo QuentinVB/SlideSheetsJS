@@ -1,0 +1,82 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/perso.css' %}"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <div id="main">
+        <header>
+            <nav>
+                KT logo
+                <ul>
+                    <li>Contact</li>
+                    <li>Shop</li>
+                    <li>Produits</li>
+                    <li>Solutions</li>
+                    <li>Support</li>
+                </ul>
+                <div>
+                    connexion area
+                </div>
+            </nav>
+        </header>  
+        <section>
+            <div>
+                <h1>jumbotron</h1>
+                <p>Sunt consectetur eu est sint ex non dolor irure. Dolore non ad consectetur elit ex. Adipisicing aute ut do excepteur cillum consequat non. Amet incididunt aute excepteur nisi adipisicing commodo fugiat ea ex aliqua irure ullamco qui. Consequat commodo laborum consectetur consequat. Ipsum quis dolor ullamco incididunt occaecat fugiat sit. Ipsum excepteur sunt nulla qui minim aliquip exercitation amet mollit mollit enim ea.</p>
+            </div>
+            <div>carrousel</div>
+        </section>
+        <section>
+            <article>post blog</article>
+            <article>post blog</article>
+            <article>post blog</article>
+        </section>
+        <section>
+            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
+            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
+            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
+            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
+            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
+            <article><img src="test.png"/>Ipsum et voluptate consequat consectetur magna qui esse dolore sunt eiusmod minim anim esse ad. Aliquip occaecat in Lorem Lorem et ullamco. Minim aute sit eu cillum Lorem.</article>
+        </section>
+        
+        <footer>
+            <nav>
+                <div>
+                    <h2>KELENN Technology</h2>
+                    <p>Headquarters: 09 52 88 04 12</p>
+                </div>
+                <div>
+                    <h2>Links</h2>
+                    <ul>
+                        <li>About</li>
+                        <li>Careers</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
+    </div>          
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script>
+     $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+    </script>
+  </body>
+</html>
+      
+
