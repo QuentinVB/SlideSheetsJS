@@ -4,10 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>jQuery slideSheetDemo</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-<script type="text/javascript" src="js/slideSheet.js"></script>
-
+<script type="text/javascript" src="js/slideSheet-1.0.0.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 
@@ -15,10 +14,12 @@ $(document).ready(function(){
 })
 </script>
 </head>
-
 <body>
-    <section style="background:url(img/starry2.jpg) no-repeat fixed center; height:600px; position:relative; z-index:200;"></section>
-    <div class="cardsContainer">
+<main>
+    <section style="background:url(img/starry2.jpg) no-repeat fixed center; height:600px; position:relative; z-index:200;">
+        <h1 style="margin:0 auto; padding-top:100px; width:200px;color:white;">SlideSheetJS Demo</p>
+    </section>
+    <div class="container">
         <div class="paperContainer">
             <article class="card hoverable papersheet" >
                 <h3>Card Title</h3>
@@ -121,7 +122,9 @@ $(document).ready(function(){
             </article>
         </div>  
     </div>
-    <section style="background:url(img/starry2.jpg) no-repeat fixed center; height:500px; position:relative; z-index:200;"></section>
-    
+    <section style="background:url(img/starry2.jpg) no-repeat fixed center; height:500px; position:relative; z-index:200;">
+        <p style="margin:0 auto; width:200px;color:white;">Image from <a href="http://www.esa.int/spaceinimages/Images/2017/11/Autumn_fireball"> Ollie Taylor</a></p>
+    </section>
+</main>
 </body>
 </html>

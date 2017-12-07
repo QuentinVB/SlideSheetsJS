@@ -286,3 +286,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+js/jquery-3.2.1.js
+js/jquery-3.2.1.min.js

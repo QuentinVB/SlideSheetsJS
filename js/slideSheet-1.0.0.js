@@ -3,6 +3,8 @@ Plugin: jQuery slipSheet
 Version 1.0.0
 Author: Quentin Vanbutsele
 Author URL: http://www.les-planetes2kentin.fr/
+
+Released under MIT Licence, so you are free to use it but dont remove the contact above ;)
 */
 
 (function( $ ){
@@ -13,23 +15,33 @@ Author URL: http://www.les-planetes2kentin.fr/
                 var sheetsValues=[];
                 var tempHeight =0;
                 var tempWidth=0;
+                var sheetOwner =   $(this) ;
+
                 $(this).find('.papersheet').each(function(index){//for each sheet inside 
-                    sheetsValues.push( {'top':$(this).offset().top, 'left':$(this).offset().left-margin,'width': $(this).width() ,'height':$(this).height()+margin*2});         
+                    sheetsValues.push( {'top':$(this).offset().top, 'left':$(this).offset().left-margin ,'width': $(this).width() ,'height':$(this).height()+margin*2});         
                     tempHeight += $(this).outerHeight()+margin*2;
-                    tempWidth= $(this).width() > tempWidth ? $(this).width():tempWidth; //get the heighest container           
+                    tempWidth=$(this).outerWidth(true);
+                
                 });   
-                maxHeight= tempHeight > maxHeight ? tempHeight+margin:maxHeight; //get the heighest container
+                maxHeight= tempHeight > maxHeight ? tempHeight+margin:maxHeight; //set the heighest container
                 sheetsInitialValues.push(sheetsValues);
-                //console.log(tempWidth);
-                //$(this).prepend('<div></div>');//force the container to be large enough
-                //$(this).find(":first-child").width(tempWidth+margin);
+
+                if(sheetOwner.find(".empty").length==0)
+                {
+                    sheetOwner.append('<div class="empty">&nbsp;</div>');//force the container to be large enough
+                    sheetOwner.find(".empty").width(tempWidth);
+                }
+               
+                
             });
-            $sheetsContainers.height( maxHeight );//force the container to be large enough
+            $sheetsContainers.height( maxHeight );//force the container to be high enough
         }
         function update(element,scrollPos){
             element.each(function(index){ //for each selector, 
                 var indexContainer = index;
-                $(this).find('.papersheet').each(function(index){//for each sheet inside                    
+               
+                
+                $(this).find('.papersheet').each(function(index){//for each sheet inside                          
                     if(scrollPos + windowHeight - sheetsInitialValues[indexContainer][index]['height'] < sheetsInitialValues[indexContainer][index]['top'])//stay fixed
                     {   
                         $(this).css({
@@ -38,6 +50,7 @@ Author URL: http://www.les-planetes2kentin.fr/
                         'width':sheetsInitialValues[indexContainer][index]['width'],
                         'bottom': "0px",   
                         'z-index':zindexOffset+element.length-index });
+                        
                     }
                     else //back to initial
                     {
@@ -48,9 +61,10 @@ Author URL: http://www.les-planetes2kentin.fr/
                             'bottom': "0px",   
                             'z-index':zindexOffset+element.length-index
                              });
-                    }
-                });              
+                    }       
+                });      
             });
+            
         }
         // setup defaults if arguments aren't specified
 		if (arguments.length < 1 || zindexOffset === null) zindexOffset = 0;
